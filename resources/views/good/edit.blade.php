@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-1">
             <form action="/good/{{ $good->id }}" method="post">
-                <!-- updateメソッドにはPUTメソッドがルーティングされているのでPUTにする -->
+                <!- updateメソッドにはPUTメソッドがルーティングされているのでPUTにする -->
 <!--削除               <input type="hidden" name="_method" value="PUT">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">

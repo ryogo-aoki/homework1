@@ -12,18 +12,18 @@
             <form action="/api/good/{{ $good->id }}" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_method" value="PUT">
           @endif
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                @csrf
                 <div class="form-group">
                     <label for="name">商品名</label>
-                    <input type="text" class="form-control" name="title" value="{{ $good->title }}">
+                    <input type="text" class="form-control" name="title" value="{{ $good->title }}" maxlength="100" >
                 </div>
                 <div class="form-group">
                     <label for="price">説明文</label>
-                    <input type="text" class="form-control" name="description" value="{{ $good->description }}">
+                    <input type="text" class="form-control" name="description" value="{{ $good->description }}" maxlength="500" required >
                 </div>
                 <div class="form-group">
                     <label for="author">価格</label>
-                    <input type="text" class="form-control" name="price" value="{{ $good->price }}">
+                    <input type="text" class="form-control" name="price" value="{{ $good->price }}" required>
                 </div>
                 <div class="form-group">
                     <label for="author">画像</label>

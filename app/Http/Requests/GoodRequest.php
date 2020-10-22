@@ -8,11 +8,11 @@ class GoodRequest extends FormRequest
 {
     public function rules()
     {
-      $tm=config('namer.titleMax');
-      $fm=config('namer.discriptionMax');
+      $title_max_length=config('namer.titleMax');
+      $discription_max_length=config('namer.discriptionMax');
         return [
-        'title' => "required|string|max:$tm",
-        'description' =>"required|string|max:$fm",
+        'title' => "required|string|max:$title_max_length",
+        'description' =>"required|string|max:$discription_max_length",
         'price' => 'required|integer',
         'image' => 'nullable',
         ];
